@@ -98,7 +98,7 @@ export function WhatsAppReactivationTab() {
   return (
     <div className="space-y-6">
       {/* Smart Campaign Banner */}
-      <div className="p-6 rounded-3xl bg-gradient-to-r from-violet-600 via-indigo-600 to-indigo-700 text-white shadow-xl relative overflow-hidden">
+      <div className="p-6 rounded-3xl bg-gradient-to-r from-violet-600 via-violet-500 to-purple-600 text-white shadow-xl shadow-violet-500/10 relative overflow-hidden">
         <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -110,7 +110,7 @@ export function WhatsAppReactivationTab() {
             <h2 className="text-xl md:text-2xl font-black tracking-tight">
               Reative {inactiveCustomers.length} clientes sumidos este mês
             </h2>
-            <p className="text-sm text-indigo-100 leading-relaxed">
+            <p className="text-sm text-violet-100 leading-relaxed">
               Clientes que não agendam há mais de 25 dias têm 3x mais chance de retornar quando recebem uma oferta carinhosa pelo WhatsApp.
             </p>
           </div>
@@ -120,9 +120,9 @@ export function WhatsAppReactivationTab() {
               variant="primary"
               onClick={handleBulkReactivation}
               disabled={selectedCustomerIds.length === 0 || isExecuting}
-              className="bg-white text-indigo-700 hover:bg-white/90 shadow-lg font-bold text-sm px-5 py-3 h-auto"
+              className="bg-white text-violet-700 hover:bg-white/90 shadow-lg font-bold text-sm px-5 py-3 h-auto"
             >
-              <Sparkles size={16} className="text-indigo-600" />
+              <Sparkles size={16} className="text-violet-600" />
               {isExecuting
                 ? 'Disparando...'
                 : `Disparar para Selecionados (${selectedCustomerIds.length})`}
@@ -138,7 +138,7 @@ export function WhatsAppReactivationTab() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                <Users size={16} className="text-indigo-500" />
+                <Users size={16} className="text-violet-500" />
                 Clientes Elegíveis para Resgate ({filtered.length})
               </h3>
               <p className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -154,19 +154,19 @@ export function WhatsAppReactivationTab() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Buscar cliente..."
-                className="w-full pl-8 pr-3 py-1.5 text-xs bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
+                className="w-full pl-8 pr-3 py-1.5 text-xs bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-violet-400"
               />
             </div>
           </div>
 
           {/* Select All Bar */}
-          <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 text-xs font-medium text-zinc-600 dark:text-zinc-400 border border-zinc-100 dark:border-zinc-800">
+          <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-violet-50/40 dark:bg-zinc-900/60 text-xs font-medium text-zinc-600 dark:text-zinc-400 border border-violet-100/60 dark:border-zinc-800">
             <label className="flex items-center gap-2 cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={selectedCustomerIds.length === filtered.length && filtered.length > 0}
                 onChange={toggleSelectAll}
-                className="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4 cursor-pointer"
+                className="rounded text-violet-600 focus:ring-violet-500 w-4 h-4 cursor-pointer"
               />
               <span>Selecionar todos ({filtered.length})</span>
             </label>
@@ -189,8 +189,8 @@ export function WhatsAppReactivationTab() {
                   <div
                     key={customer.id}
                     className={cn(
-                      'py-3 px-2 flex items-center justify-between gap-3 rounded-xl transition-colors hover:bg-zinc-50/70 dark:hover:bg-zinc-900/40',
-                      isSelected && 'bg-indigo-50/50 dark:bg-indigo-950/20'
+                      'py-3 px-2 flex items-center justify-between gap-3 rounded-xl transition-colors hover:bg-violet-50/30 dark:hover:bg-zinc-900/40',
+                      isSelected && 'bg-violet-50/60 dark:bg-violet-950/20'
                     )}
                   >
                     <div className="flex items-center gap-3 min-w-0">
@@ -198,7 +198,7 @@ export function WhatsAppReactivationTab() {
                         type="checkbox"
                         checked={isSelected}
                         onChange={() => toggleSelectOne(customer.id)}
-                        className="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4 cursor-pointer shrink-0"
+                        className="rounded text-violet-600 focus:ring-violet-500 w-4 h-4 cursor-pointer shrink-0"
                       />
                       <div className="min-w-0">
                         <div className="flex items-center gap-2">

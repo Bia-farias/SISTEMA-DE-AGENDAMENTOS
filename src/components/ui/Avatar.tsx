@@ -33,7 +33,7 @@ export function Avatar({ src, name, size = 'md', className }: AvatarProps) {
 
   // Generate consistent color hash from name
   const colors = [
-    'bg-indigo-500 text-white',
+    'bg-purple-500 text-white',
     'bg-violet-500 text-white',
     'bg-sky-500 text-white',
     'bg-emerald-500 text-white',

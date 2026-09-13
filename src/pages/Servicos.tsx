@@ -51,7 +51,7 @@ export default function Servicos() {
           size="sm"
           onClick={() => openNewServiceDrawer()}
           leftIcon={<Plus size={16} />}
-          className="shadow-sm shadow-indigo-500/25"
+          className="shadow-sm shadow-violet-400/20"
         >
           + Novo Serviço
         </Button>
@@ -65,8 +65,8 @@ export default function Servicos() {
             onClick={() => setSelectedCategory(cat)}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
               selectedCategory === cat
-                ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-500/20'
-                : 'bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
+                ? 'bg-violet-600 text-white shadow-sm shadow-violet-400/25'
+                : 'bg-white dark:bg-zinc-900 hover:bg-violet-50 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-violet-100/70 dark:border-zinc-800'
             }`}
           >
             {cat === 'all' ? 'Todos os Serviços' : cat}
@@ -94,10 +94,10 @@ export default function Servicos() {
               <div>
                 <div className="flex items-start justify-between gap-3">
                   <div className="space-y-1">
-                    <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
+                    <span className="text-[10px] font-bold text-violet-600 dark:text-violet-400 uppercase tracking-wider block">
                       {service.category}
                     </span>
-                    <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                       {service.name}
                     </h3>
                   </div>

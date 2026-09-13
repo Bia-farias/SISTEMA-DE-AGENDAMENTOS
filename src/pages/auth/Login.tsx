@@ -86,7 +86,7 @@ export default function Login() {
           <div className="flex justify-end pt-1">
             <Link
               to="/forgot-password"
-              className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+              className="text-xs font-semibold text-violet-600 dark:text-violet-400 hover:underline"
             >
               Esqueceu a senha?
             </Link>
@@ -95,7 +95,7 @@ export default function Login() {
 
         <Button
           type="submit"
-          className="w-full shadow-lg shadow-indigo-500/25"
+          className="w-full shadow-lg shadow-violet-400/20"
           isLoading={isLoading}
           rightIcon={<ArrowRight size={16} />}
         >
@@ -104,18 +104,18 @@ export default function Login() {
       </form>
 
       {/* Quick Demo Access Bar */}
-      <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
+      <div className="pt-4 border-t border-violet-100 dark:border-zinc-800">
         <p className="text-xs font-bold text-zinc-600 dark:text-zinc-400 mb-2.5 uppercase tracking-wider flex items-center gap-1.5">
-          <Sparkles size={14} className="text-indigo-500" />
+          <Sparkles size={14} className="text-violet-500" />
           Acesso Rápido de Demonstração
         </p>
         <div className="grid grid-cols-3 gap-2">
           <button
             type="button"
             onClick={() => handleDemoLogin('owner')}
-            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/40 transition-all text-left group"
+            className="p-2.5 rounded-xl bg-white dark:bg-zinc-900 hover:bg-violet-50 dark:hover:bg-violet-950/40 border border-violet-100 dark:border-zinc-800 hover:border-violet-300 dark:hover:border-violet-500/40 transition-all text-left group shadow-xs"
           >
-            <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 block">
+            <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 block">
               Dono / Admin
             </span>
             <span className="text-[10px] text-zinc-400">Acesso total</span>
@@ -124,9 +124,9 @@ export default function Login() {
           <button
             type="button"
             onClick={() => handleDemoLogin('professional')}
-            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/40 transition-all text-left group"
+            className="p-2.5 rounded-xl bg-white dark:bg-zinc-900 hover:bg-violet-50 dark:hover:bg-violet-950/40 border border-violet-100 dark:border-zinc-800 hover:border-violet-300 dark:hover:border-violet-500/40 transition-all text-left group shadow-xs"
           >
-            <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 block">
+            <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 block">
               Profissional
             </span>
             <span className="text-[10px] text-zinc-400">Minha escala</span>
@@ -135,9 +135,9 @@ export default function Login() {
           <button
             type="button"
             onClick={() => handleDemoLogin('receptionist')}
-            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/40 transition-all text-left group"
+            className="p-2.5 rounded-xl bg-white dark:bg-zinc-900 hover:bg-violet-50 dark:hover:bg-violet-950/40 border border-violet-100 dark:border-zinc-800 hover:border-violet-300 dark:hover:border-violet-500/40 transition-all text-left group shadow-xs"
           >
-            <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 block">
+            <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 block">
               Recepção
             </span>
             <span className="text-[10px] text-zinc-400">Agendamentos</span>
@@ -149,7 +149,7 @@ export default function Login() {
         Não possui uma conta?{' '}
         <Link
           to="/register"
-          className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+          className="font-bold text-violet-600 dark:text-violet-400 hover:underline"
         >
           Cadastre seu estabelecimento
         </Link>

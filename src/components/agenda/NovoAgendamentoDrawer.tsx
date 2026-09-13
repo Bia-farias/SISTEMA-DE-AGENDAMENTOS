@@ -192,7 +192,7 @@ export function NovoAgendamentoDrawer() {
         <div className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-              <User size={14} className="text-indigo-500" />
+              <User size={14} className="text-violet-500" />
               Cliente
             </span>
             <button

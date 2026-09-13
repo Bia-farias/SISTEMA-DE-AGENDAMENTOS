@@ -139,12 +139,12 @@ function MessageBubble({ message }: { message: AIChatMessage }) {
     return (
       <div className="flex justify-end gap-2 items-end animate-fade-in">
         <div className="max-w-[85%]">
-          <div className="bg-indigo-600 text-white rounded-2xl rounded-br-sm px-4 py-2.5 text-[12.5px] leading-relaxed shadow-md shadow-indigo-900/40">
+          <div className="bg-violet-600 text-white rounded-2xl rounded-br-sm px-4 py-2.5 text-[12.5px] leading-relaxed shadow-md shadow-violet-900/30">
             {message.content}
           </div>
           <p className="text-[10px] text-zinc-500 mt-1 text-right">{timeStr}</p>
         </div>
-        <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shrink-0 mb-4">
+        <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-violet-500 to-purple-600 flex items-center justify-center shrink-0 mb-4">
           <User size={13} className="text-white" />
         </div>
       </div>
@@ -290,7 +290,7 @@ export function AIChatPanel() {
         style={{ width: 'min(440px, 100vw)' }}
       >
         {/* Header */}
-        <div className="relative flex items-center justify-between px-5 py-4 border-b border-zinc-800/80 bg-gradient-to-r from-violet-950/80 via-indigo-950/80 to-[#0f0f12] shrink-0">
+        <div className="relative flex items-center justify-between px-5 py-4 border-b border-zinc-800/80 bg-gradient-to-r from-violet-950/80 via-purple-950/70 to-[#0f0f12] shrink-0">
           {/* Glow effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-violet-600/10 to-transparent pointer-events-none" />
 
@@ -393,7 +393,7 @@ export function AIChatPanel() {
             <button
               onClick={handleSubmit}
               disabled={!input.trim() || isLoading}
-              className="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-md shadow-violet-900/40 shrink-0"
+              className="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-md shadow-violet-900/40 shrink-0"
             >
               <Send size={13} className="text-white" />
             </button>

@@ -7,8 +7,9 @@ interface ThemeState {
 }
 
 export const useThemeStore = create<ThemeState>((set) => {
-  const savedTheme = localStorage.getItem('agenda_ai_theme');
-  const initialDark = savedTheme ? savedTheme === 'dark' : true; // Default to dark for sleek aesthetics
+  // Always default to Light Mode (predominantly white with soft pastel violet accents)
+  const savedTheme = localStorage.getItem('agenda_ai_theme_v2');
+  const initialDark = savedTheme === 'dark';
 
   if (initialDark) {
     document.documentElement.classList.add('dark');
@@ -23,10 +24,10 @@ export const useThemeStore = create<ThemeState>((set) => {
         const next = !state.isDark;
         if (next) {
           document.documentElement.classList.add('dark');
-          localStorage.setItem('agenda_ai_theme', 'dark');
+          localStorage.setItem('agenda_ai_theme_v2', 'dark');
         } else {
           document.documentElement.classList.remove('dark');
-          localStorage.setItem('agenda_ai_theme', 'light');
+          localStorage.setItem('agenda_ai_theme_v2', 'light');
         }
         return { isDark: next };
       }),
@@ -34,10 +35,10 @@ export const useThemeStore = create<ThemeState>((set) => {
       set(() => {
         if (isDark) {
           document.documentElement.classList.add('dark');
-          localStorage.setItem('agenda_ai_theme', 'dark');
+          localStorage.setItem('agenda_ai_theme_v2', 'dark');
         } else {
           document.documentElement.classList.remove('dark');
-          localStorage.setItem('agenda_ai_theme', 'light');
+          localStorage.setItem('agenda_ai_theme_v2', 'light');
         }
         return { isDark };
       }),

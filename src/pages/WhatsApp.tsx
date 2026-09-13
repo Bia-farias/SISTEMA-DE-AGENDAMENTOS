@@ -160,10 +160,10 @@ export default function WhatsAppPage() {
       {/* Top Metrics Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Metric 1 */}
-        <div className="bg-white dark:bg-[#121216] border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
+        <div className="bg-white dark:bg-[#121216] border border-violet-100/70 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
           <div className="flex items-center justify-between text-zinc-400 mb-2">
             <span className="text-xs font-medium">Disparos este mês</span>
-            <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+            <div className="p-2 rounded-xl bg-violet-50 dark:bg-violet-500/10 text-violet-600 dark:text-violet-400">
               <MessageSquare size={16} />
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function WhatsAppPage() {
         </div>
 
         {/* Metric 2 */}
-        <div className="bg-white dark:bg-[#121216] border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
+        <div className="bg-white dark:bg-[#121216] border border-violet-100/70 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
           <div className="flex items-center justify-between text-zinc-400 mb-2">
             <span className="text-xs font-medium">Taxa de Confirmação</span>
             <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
@@ -193,7 +193,7 @@ export default function WhatsAppPage() {
         </div>
 
         {/* Metric 3 */}
-        <div className="bg-white dark:bg-[#121216] border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
+        <div className="bg-white dark:bg-[#121216] border border-violet-100/70 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
           <div className="flex items-center justify-between text-zinc-400 mb-2">
             <span className="text-xs font-medium">Automações Ativas</span>
             <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400">
@@ -209,7 +209,7 @@ export default function WhatsAppPage() {
         </div>
 
         {/* Metric 4 */}
-        <div className="bg-white dark:bg-[#121216] border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
+        <div className="bg-white dark:bg-[#121216] border border-violet-100/70 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
           <div className="flex items-center justify-between text-zinc-400 mb-2">
             <span className="text-xs font-medium">Clientes Resgatados</span>
             <div className="p-2 rounded-xl bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400">
@@ -226,13 +226,13 @@ export default function WhatsAppPage() {
       </div>
 
       {/* Tabs Navigation */}
-      <div className="flex items-center gap-2 border-b border-zinc-200 dark:border-zinc-800/80 overflow-x-auto no-scrollbar">
+      <div className="flex items-center gap-2 border-b border-violet-100 dark:border-zinc-800/80 overflow-x-auto no-scrollbar">
         <button
           onClick={() => setActiveTab('rules')}
           className={cn(
             'flex items-center gap-2 px-4 py-3 text-xs font-bold border-b-2 transition-colors whitespace-nowrap cursor-pointer',
             activeTab === 'rules'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-violet-600 text-violet-600 dark:text-violet-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
           )}
         >
@@ -245,7 +245,7 @@ export default function WhatsAppPage() {
           className={cn(
             'flex items-center gap-2 px-4 py-3 text-xs font-bold border-b-2 transition-colors whitespace-nowrap cursor-pointer',
             activeTab === 'templates'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-violet-600 text-violet-600 dark:text-violet-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
           )}
         >
@@ -258,7 +258,7 @@ export default function WhatsAppPage() {
           className={cn(
             'flex items-center gap-2 px-4 py-3 text-xs font-bold border-b-2 transition-colors whitespace-nowrap cursor-pointer',
             activeTab === 'recovery'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-violet-600 text-violet-600 dark:text-violet-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
           )}
         >
@@ -274,7 +274,7 @@ export default function WhatsAppPage() {
           className={cn(
             'flex items-center gap-2 px-4 py-3 text-xs font-bold border-b-2 transition-colors whitespace-nowrap cursor-pointer',
             activeTab === 'logs'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-violet-600 text-violet-600 dark:text-violet-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
           )}
         >
@@ -287,7 +287,7 @@ export default function WhatsAppPage() {
           className={cn(
             'flex items-center gap-2 px-4 py-3 text-xs font-bold border-b-2 transition-colors whitespace-nowrap cursor-pointer',
             activeTab === 'connection'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-violet-600 text-violet-600 dark:text-violet-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
           )}
         >
@@ -348,7 +348,7 @@ export default function WhatsAppPage() {
                     className={cn(
                       'w-full text-left p-3.5 rounded-2xl border transition-all text-xs flex flex-col gap-1 cursor-pointer',
                       isSelected
-                        ? 'bg-indigo-50/70 dark:bg-indigo-950/30 border-indigo-500 text-indigo-950 dark:text-indigo-200 shadow-sm'
+                        ? 'bg-violet-50/80 dark:bg-violet-950/30 border-violet-400 text-violet-950 dark:text-violet-200 shadow-xs'
                         : 'bg-white dark:bg-[#121216] border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-700'
                     )}
                   >
@@ -378,7 +378,7 @@ export default function WhatsAppPage() {
                   type="text"
                   value={editingName}
                   onChange={(e) => setEditingName(e.target.value)}
-                  className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 focus:outline-hidden"
+                  className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-violet-400 focus:outline-hidden"
                 />
               </div>
 
@@ -395,7 +395,7 @@ export default function WhatsAppPage() {
                   rows={8}
                   value={editingContent}
                   onChange={(e) => setEditingContent(e.target.value)}
-                  className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 focus:outline-hidden resize-none font-mono"
+                  className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-violet-400 focus:outline-hidden resize-none font-mono"
                   placeholder="Digite a mensagem..."
                 />
               </div>
@@ -418,7 +418,7 @@ export default function WhatsAppPage() {
                       key={tag}
                       type="button"
                       onClick={() => handleInsertTag(tag)}
-                      className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-zinc-700 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 border border-zinc-200 dark:border-zinc-700 transition-colors"
+                      className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-violet-50 dark:hover:bg-violet-950/40 text-zinc-700 dark:text-zinc-300 hover:text-violet-600 dark:hover:text-violet-400 border border-zinc-200 dark:border-zinc-700 transition-colors"
                     >
                       + {tag}
                     </button>
@@ -431,7 +431,7 @@ export default function WhatsAppPage() {
                 <Button
                   variant="primary"
                   onClick={handleSaveTemplate}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs"
+                  className="bg-violet-600 hover:bg-violet-700 text-white text-xs"
                 >
                   {isSaved ? (
                     <span className="flex items-center gap-1.5 text-emerald-300">
@@ -585,7 +585,7 @@ export default function WhatsAppPage() {
                               message: `Reenviando mensagem para ${log.customerName}...`,
                             });
                           }}
-                          className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+                          className="text-[11px] font-semibold text-violet-600 dark:text-violet-400 hover:underline"
                         >
                           Reenviar
                         </button>
@@ -667,7 +667,7 @@ export default function WhatsAppPage() {
           {/* Card 2: Detalhes Técnicos & Webhook */}
           <div className="bg-white dark:bg-[#121216] border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 shadow-sm space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center">
                 <ShieldCheck size={24} />
               </div>
               <div>
@@ -699,7 +699,7 @@ export default function WhatsAppPage() {
                         message: 'URL do Webhook copiada!',
                       });
                     }}
-                    className="p-1 hover:text-indigo-600 text-zinc-400"
+                    className="p-1 hover:text-violet-600 text-zinc-400"
                     title="Copiar URL"
                   >
                     <Copy size={13} />

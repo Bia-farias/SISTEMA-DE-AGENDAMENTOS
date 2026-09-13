@@ -95,7 +95,7 @@ export default function Dashboard() {
             size="sm"
             onClick={() => openNewAppointmentDrawer()}
             leftIcon={<Plus size={16} />}
-            className="shadow-sm shadow-indigo-500/25"
+            className="shadow-sm shadow-violet-400/20"
           >
             + Novo Agendamento
           </Button>
@@ -117,7 +117,7 @@ export default function Dashboard() {
           value={kpis.todayAppointmentsCount}
           subtitle={`${kpis.todayCompletedCount} concluídos • ${kpis.todayPendingCount} pendentes`}
           icon={<Calendar size={22} />}
-          color="indigo"
+          color="violet"
         />
 
         <StatsCard
@@ -145,7 +145,7 @@ export default function Dashboard() {
             <CardHeader
               title={
                 <div className="flex items-center gap-2">
-                  <Clock size={18} className="text-indigo-500" />
+                  <Clock size={18} className="text-violet-500" />
                   <span>Agenda de Hoje</span>
                   <Badge variant="primary" size="sm">
                     {todayAppointments.length} horários
@@ -179,11 +179,11 @@ export default function Dashboard() {
                   <div
                     key={apt.id}
                     onClick={() => openDetailDrawer(apt.id)}
-                    className="p-4 rounded-2xl bg-zinc-50/70 dark:bg-zinc-900/40 hover:bg-white dark:hover:bg-zinc-900 border border-zinc-200/70 dark:border-zinc-800/80 hover:border-indigo-300 dark:hover:border-indigo-500/40 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
+                    className="p-4 rounded-2xl bg-white hover:bg-violet-50/40 dark:bg-zinc-900/40 dark:hover:bg-zinc-900 border border-violet-100/80 dark:border-zinc-800/80 hover:border-violet-300 dark:hover:border-violet-500/40 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
                   >
                     <div className="flex items-center gap-3.5">
                       <div className="w-14 text-center shrink-0">
-                        <span className="text-sm font-extrabold text-indigo-600 dark:text-indigo-400 block font-mono">
+                        <span className="text-sm font-extrabold text-violet-600 dark:text-violet-400 block font-mono">
                           {apt.start_time}
                         </span>
                         <span className="text-[10px] text-zinc-400 font-mono">
@@ -191,11 +191,11 @@ export default function Dashboard() {
                         </span>
                       </div>
 
-                      <div className="w-px h-8 bg-zinc-200 dark:bg-zinc-800 shrink-0" />
+                      <div className="w-px h-8 bg-violet-100 dark:bg-zinc-800 shrink-0" />
 
                       <div className="space-y-0.5 min-w-0">
                         <div className="flex items-center gap-2">
-                          <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                          <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                             {apt.customer_name}
                           </h4>
                           <Badge variant={statusVariants[apt.status]} size="sm">
@@ -212,7 +212,7 @@ export default function Dashboard() {
                       <span className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 font-mono">
                         {formatCurrency(apt.total_price)}
                       </span>
-                      <span className="text-xs text-indigo-500 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                      <span className="text-xs text-violet-500 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
                         Detalhes &rarr;
                       </span>
                     </div>
@@ -258,8 +258,8 @@ export default function Dashboard() {
                           style={{ height: `${Math.max(heightPercent, 12)}%` }}
                           className={`w-full max-w-[28px] rounded-xl transition-all duration-300 ${
                             isHighest
-                              ? 'bg-gradient-to-t from-indigo-600 to-violet-500 shadow-md shadow-indigo-500/30'
-                              : 'bg-zinc-200 dark:bg-zinc-800 group-hover:bg-indigo-400/80 dark:group-hover:bg-indigo-500/60'
+                              ? 'bg-gradient-to-t from-violet-500 to-purple-400 shadow-md shadow-violet-400/25'
+                              : 'bg-violet-100/70 dark:bg-zinc-800 group-hover:bg-violet-300 dark:group-hover:bg-violet-500/60'
                           }`}
                         />
                       </div>
@@ -305,10 +305,10 @@ export default function Dashboard() {
               {services.slice(0, 4).map((service, idx) => (
                 <div
                   key={service.id}
-                  className="flex items-center justify-between p-3 rounded-xl bg-zinc-50/60 dark:bg-zinc-900/40 border border-zinc-200/60 dark:border-zinc-800 text-xs"
+                  className="flex items-center justify-between p-3 rounded-xl bg-violet-50/30 dark:bg-zinc-900/40 border border-violet-100/70 dark:border-zinc-800 text-xs"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-6 h-6 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold flex items-center justify-center text-xs">
+                    <span className="w-6 h-6 rounded-lg bg-violet-100/80 dark:bg-violet-500/10 text-violet-700 dark:text-violet-400 font-bold flex items-center justify-center text-xs">
                       #{idx + 1}
                     </span>
                     <div>

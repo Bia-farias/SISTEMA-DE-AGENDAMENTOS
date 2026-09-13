@@ -77,7 +77,7 @@ export default function Register() {
           <span
             className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
               step === 1
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-violet-600 text-white'
                 : 'bg-emerald-500 text-white'
             }`}
           >
@@ -130,7 +130,7 @@ export default function Register() {
 
           <Button
             type="submit"
-            className="w-full shadow-lg shadow-indigo-500/25"
+            className="w-full shadow-lg shadow-violet-400/20"
             rightIcon={<ArrowRight size={16} />}
           >
             Avançar para Dados do Negócio
@@ -180,7 +180,7 @@ export default function Register() {
             </Button>
             <Button
               type="submit"
-              className="flex-1 shadow-lg shadow-indigo-500/25"
+              className="flex-1 shadow-lg shadow-violet-400/20"
               isLoading={isLoading}
               rightIcon={<Sparkles size={16} />}
             >
@@ -194,7 +194,7 @@ export default function Register() {
         Já possui uma conta?{' '}
         <Link
           to="/login"
-          className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+          className="font-bold text-violet-600 dark:text-violet-400 hover:underline"
         >
           Fazer login
         </Link>

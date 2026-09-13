@@ -86,7 +86,7 @@ export default function Clientes() {
           size="sm"
           onClick={() => openNewCustomerDrawer()}
           leftIcon={<Plus size={16} />}
-          className="shadow-sm shadow-indigo-500/25"
+          className="shadow-sm shadow-violet-400/20"
         >
           + Novo Cliente
         </Button>
@@ -118,7 +118,7 @@ export default function Clientes() {
               onClick={() => setViewLayout('grid')}
               className={`p-2 rounded-lg transition-all ${
                 viewLayout === 'grid'
-                  ? 'bg-white dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                  ? 'bg-white dark:bg-zinc-800 text-violet-600 dark:text-violet-400 shadow-sm'
                   : 'text-zinc-400'
               }`}
               title="Visualização em Cards"
@@ -129,7 +129,7 @@ export default function Clientes() {
               onClick={() => setViewLayout('table')}
               className={`p-2 rounded-lg transition-all ${
                 viewLayout === 'table'
-                  ? 'bg-white dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                  ? 'bg-white dark:bg-zinc-800 text-violet-600 dark:text-violet-400 shadow-sm'
                   : 'text-zinc-400'
               }`}
               title="Visualização em Tabela"
@@ -168,7 +168,7 @@ export default function Clientes() {
                   <div className="flex items-center gap-3">
                     <Avatar name={customer.name} size="md" />
                     <div>
-                      <h3 className="font-bold text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                      <h3 className="font-bold text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors flex items-center gap-1.5">
                         {customer.name}
                         {customer.is_vip && (
                           <Sparkles size={13} className="text-amber-500" />
@@ -224,7 +224,7 @@ export default function Clientes() {
                   >
                     <Edit2 size={15} />
                   </button>
-                  <span className="text-xs text-indigo-500 font-semibold flex items-center gap-0.5 ml-1">
+                  <span className="text-xs text-violet-500 font-semibold flex items-center gap-0.5 ml-1">
                     Ver <ArrowRight size={13} />
                   </span>
                 </div>

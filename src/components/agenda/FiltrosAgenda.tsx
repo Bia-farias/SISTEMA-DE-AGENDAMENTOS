@@ -62,7 +62,7 @@ export function FiltrosAgenda({
         </div>
 
         <span className="text-xs sm:text-sm font-bold text-zinc-800 dark:text-zinc-200 flex items-center gap-1.5">
-          <CalendarIcon size={16} className="text-indigo-500" />
+          <CalendarIcon size={16} className="text-violet-500" />
           {formatDate(currentWeekStart.toISOString().split('T')[0])}
         </span>
       </div>
@@ -74,7 +74,7 @@ export function FiltrosAgenda({
           <select
             value={selectedProfessionalId}
             onChange={(e) => setSelectedProfessionalId(e.target.value)}
-            className="w-full text-xs rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-3 py-2 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-xs rounded-xl bg-white dark:bg-zinc-900 border border-violet-100 dark:border-zinc-800 px-3 py-2 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-violet-400"
           >
             <option value="all">Todos os Profissionais</option>
             {professionals
@@ -92,7 +92,7 @@ export function FiltrosAgenda({
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value as AppointmentStatus | 'all')}
-            className="w-full text-xs rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-3 py-2 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-xs rounded-xl bg-white dark:bg-zinc-900 border border-violet-100 dark:border-zinc-800 px-3 py-2 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-violet-400"
           >
             <option value="all">Todos os Status</option>
             <option value="pending">Pendente</option>
@@ -103,7 +103,7 @@ export function FiltrosAgenda({
         </div>
 
         {/* View Mode (Semana / Dia) */}
-        <div className="flex items-center bg-zinc-100 dark:bg-zinc-900 p-0.5 rounded-xl border border-zinc-200 dark:border-zinc-800">
+        <div className="flex items-center bg-violet-50/60 dark:bg-zinc-900 p-0.5 rounded-xl border border-violet-100 dark:border-zinc-800">
           <button
             onClick={() => setViewMode('week')}
             className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
@@ -131,7 +131,7 @@ export function FiltrosAgenda({
           size="sm"
           onClick={() => openNewAppointmentDrawer()}
           leftIcon={<Plus size={16} />}
-          className="shadow-sm shadow-indigo-500/25 ml-auto sm:ml-0"
+          className="shadow-sm shadow-violet-400/20 ml-auto sm:ml-0"
         >
           Novo Horário
         </Button>

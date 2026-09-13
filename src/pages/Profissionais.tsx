@@ -44,7 +44,7 @@ export default function Profissionais() {
           size="sm"
           onClick={() => openNewProfessionalDrawer()}
           leftIcon={<Plus size={16} />}
-          className="shadow-sm shadow-indigo-500/25"
+          className="shadow-sm shadow-violet-400/20"
         >
           + Novo Profissional
         </Button>
@@ -77,7 +77,7 @@ export default function Profissionais() {
                       className="shadow-sm"
                     />
                     <div>
-                      <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                      <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                         {prof.name}
                       </h3>
                       <p className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">
@@ -101,7 +101,7 @@ export default function Profissionais() {
                   {prof.specialties.map((spec, i) => (
                     <span
                       key={i}
-                      className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-500/20"
+                      className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-violet-50 dark:bg-violet-500/10 text-violet-700 dark:text-violet-400 border border-violet-200/60 dark:border-violet-500/20"
                     >
                       {spec}
                     </span>
@@ -112,19 +112,19 @@ export default function Profissionais() {
                 <div className="space-y-1.5 mt-4 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 text-xs text-zinc-500 dark:text-zinc-400">
                   {prof.phone && (
                     <p className="flex items-center gap-2">
-                      <Phone size={13} className="text-indigo-500" />
+                      <Phone size={13} className="text-violet-500" />
                       {formatPhone(prof.phone)}
                     </p>
                   )}
                   {prof.email && (
                     <p className="flex items-center gap-2 truncate">
-                      <Mail size={13} className="text-indigo-500" />
+                      <Mail size={13} className="text-violet-500" />
                       {prof.email}
                     </p>
                   )}
                   {prof.working_hours && (
                     <p className="flex items-center gap-2">
-                      <Clock size={13} className="text-indigo-500" />
+                      <Clock size={13} className="text-violet-500" />
                       {prof.working_hours.start} às {prof.working_hours.end}
                     </p>
                   )}

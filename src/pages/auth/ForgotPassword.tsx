@@ -71,7 +71,7 @@ export default function ForgotPassword() {
 
           <Button
             type="submit"
-            className="w-full shadow-lg shadow-indigo-500/25"
+            className="w-full shadow-lg shadow-violet-400/20"
             isLoading={isLoading}
           >
             Enviar Link de Recuperação

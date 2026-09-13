@@ -72,7 +72,7 @@ export function WhatsAppRuleCard({
       className={cn(
         'p-5 rounded-2xl border transition-all duration-200 flex flex-col justify-between group',
         rule.isActive
-          ? 'bg-white dark:bg-[#121216] border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-indigo-500/50 hover:shadow-indigo-500/5'
+          ? 'bg-white dark:bg-[#121216] border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-violet-300 dark:hover:border-violet-700/50 hover:shadow-violet-500/5'
           : 'bg-zinc-50/70 dark:bg-zinc-900/30 border-zinc-200/50 dark:border-zinc-800/40 opacity-70'
       )}
     >
@@ -149,7 +149,7 @@ export function WhatsAppRuleCard({
             <button
               type="button"
               onClick={() => onSelectTemplate(rule.templateId)}
-              className="px-2.5 py-1 text-[11px] font-medium text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 rounded-lg transition-colors flex items-center gap-1"
+              className="px-2.5 py-1 text-[11px] font-medium text-violet-600 dark:text-violet-400 hover:bg-violet-50 dark:hover:bg-violet-500/10 rounded-lg transition-colors flex items-center gap-1"
             >
               <Edit3 size={12} />
               Editar Texto

@@ -75,10 +75,10 @@ export function CalendarioSemanal({
       dot: 'bg-emerald-500',
     },
     completed: {
-      bg: 'bg-indigo-500/10 hover:bg-indigo-500/20 dark:bg-indigo-500/15',
-      border: 'border-indigo-500/40',
-      text: 'text-indigo-700 dark:text-indigo-300',
-      dot: 'bg-indigo-500',
+      bg: 'bg-violet-500/10 hover:bg-violet-500/20 dark:bg-violet-500/15',
+      border: 'border-violet-500/40',
+      text: 'text-violet-700 dark:text-violet-300',
+      dot: 'bg-violet-500',
     },
     cancelled: {
       bg: 'bg-rose-500/10 hover:bg-rose-500/20 dark:bg-rose-500/15 opacity-60',
@@ -89,11 +89,11 @@ export function CalendarioSemanal({
   };
 
   return (
-    <div className="bg-white dark:bg-[#121215] border border-zinc-200/80 dark:border-zinc-800/80 rounded-2xl shadow-sm overflow-hidden flex flex-col">
+    <div className="bg-white dark:bg-[#121215] border border-violet-100/80 dark:border-zinc-800/80 rounded-2xl shadow-sm overflow-hidden flex flex-col">
       {/* Calendar Header: Days of the week */}
-      <div className="grid grid-cols-[60px_repeat(auto-fit,minmax(120px,1fr))] border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-zinc-900/50 sticky top-0 z-10">
+      <div className="grid grid-cols-[60px_repeat(auto-fit,minmax(120px,1fr))] border-b border-violet-100/70 dark:border-zinc-800 bg-[#faf9ff] dark:bg-zinc-900/50 sticky top-0 z-10">
         {/* Time column placeholder */}
-        <div className="p-3 text-center text-xs font-bold text-zinc-400 border-r border-zinc-200 dark:border-zinc-800">
+        <div className="p-3 text-center text-xs font-bold text-zinc-400 border-r border-violet-100/70 dark:border-zinc-800">
           Hora
         </div>
 
@@ -101,8 +101,8 @@ export function CalendarioSemanal({
         {days.map((day) => (
           <div
             key={day.dateStr}
-            className={`p-3 text-center border-r border-zinc-200/60 dark:border-zinc-800/60 last:border-r-0 transition-colors ${
-              day.isToday ? 'bg-indigo-50/60 dark:bg-indigo-500/10' : ''
+            className={`p-3 text-center border-r border-violet-100/60 dark:border-zinc-800/60 last:border-r-0 transition-colors ${
+              day.isToday ? 'bg-violet-50/70 dark:bg-violet-500/10' : ''
             }`}
           >
             <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">
@@ -111,7 +111,7 @@ export function CalendarioSemanal({
             <span
               className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-extrabold mt-0.5 ${
                 day.isToday
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-500/30'
+                  ? 'bg-violet-600 text-white shadow-sm shadow-violet-400/25'
                   : 'text-zinc-800 dark:text-zinc-200'
               }`}
             >
@@ -143,8 +143,8 @@ export function CalendarioSemanal({
               return (
                 <div
                   key={`${day.dateStr}-${slot}`}
-                  className={`p-1 border-r border-zinc-200/50 dark:border-zinc-800/40 last:border-r-0 relative hover:bg-zinc-50/80 dark:hover:bg-zinc-800/20 transition-colors flex flex-col gap-1 ${
-                    day.isToday ? 'bg-indigo-50/15 dark:bg-indigo-500/5' : ''
+                  className={`p-1 border-r border-violet-100/50 dark:border-zinc-800/40 last:border-r-0 relative hover:bg-violet-50/40 dark:hover:bg-zinc-800/20 transition-colors flex flex-col gap-1 ${
+                    day.isToday ? 'bg-violet-50/20 dark:bg-violet-500/5' : ''
                   }`}
                 >
                   {slotAppointments.length > 0 ? (
@@ -154,7 +154,7 @@ export function CalendarioSemanal({
                         <div
                           key={apt.id}
                           onClick={() => openDetailDrawer(apt.id)}
-                          className={`p-2 rounded-xl border ${colors.bg} ${colors.border} cursor-pointer transition-all duration-150 shadow-sm hover:shadow-md hover:scale-[1.01]`}
+                          className={`p-2 rounded-xl border ${colors.bg} ${colors.border} cursor-pointer transition-all duration-150 shadow-xs hover:shadow-md hover:scale-[1.01]`}
                         >
                           <div className="flex items-center justify-between gap-1">
                             <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100 truncate">
@@ -187,7 +187,7 @@ export function CalendarioSemanal({
                               : undefined,
                         })
                       }
-                      className="w-full h-full min-h-[46px] rounded-xl opacity-0 group-hover:opacity-100 hover:!opacity-100 flex items-center justify-center text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/50 dark:hover:bg-indigo-500/10 transition-all text-xs font-semibold gap-1"
+                      className="w-full h-full min-h-[46px] rounded-xl opacity-0 group-hover:opacity-100 hover:!opacity-100 flex items-center justify-center text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-violet-50/60 dark:hover:bg-violet-500/10 transition-all text-xs font-semibold gap-1"
                       title="Agendar neste horário"
                     >
                       <Plus size={14} />

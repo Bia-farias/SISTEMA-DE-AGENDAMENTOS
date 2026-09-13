@@ -26,7 +26,7 @@ export function EmptyState({
         className
       )}
     >
-      <div className="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 border border-indigo-200/50 dark:border-indigo-500/20 shadow-sm">
+      <div className="w-14 h-14 rounded-2xl bg-violet-50 dark:bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center mb-4 border border-violet-200/60 dark:border-violet-500/20 shadow-xs">
         {icon}
       </div>
       <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">{title}</h3>
