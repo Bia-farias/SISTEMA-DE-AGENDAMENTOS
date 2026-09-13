@@ -7,23 +7,23 @@ export function AuthLayout() {
   const { isDark, toggleTheme } = useThemeStore();
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row bg-zinc-50 dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 transition-colors">
+    <div className="min-h-screen flex flex-col lg:flex-row bg-[#faf9ff] dark:bg-[#0d0b14] text-zinc-900 dark:text-zinc-100 transition-colors">
       {/* Left Branding Showcase Panel (Desktop) */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-zinc-900 p-12 flex-col justify-between border-r border-zinc-800">
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-[#13101e] p-12 flex-col justify-between border-r border-violet-900/30">
         {/* Background ambient glowing gradients */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2" />
 
         {/* Brand Header */}
         <div className="relative z-10">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-extrabold text-2xl shadow-lg shadow-indigo-500/30">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-violet-400 via-violet-300 to-purple-300 flex items-center justify-center text-white font-extrabold text-2xl shadow-lg shadow-violet-500/30">
               A
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-black tracking-tight text-white flex items-center gap-2">
                 Agenda AI
-                <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30">
                   SaaS V1
                 </span>
               </span>
@@ -36,7 +36,7 @@ export function AuthLayout() {
 
         {/* Value Proposition Hero */}
         <div className="relative z-10 space-y-6 max-w-lg">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-800/80 border border-zinc-700/80 text-indigo-400 text-xs font-semibold">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-xs font-semibold">
             <Sparkles size={14} />
             Potencializado por Inteligência Artificial
           </div>
@@ -65,9 +65,9 @@ export function AuthLayout() {
         </div>
 
         {/* Security & Footer */}
-        <div className="relative z-10 flex items-center justify-between text-xs text-zinc-500 pt-6 border-t border-zinc-800">
+        <div className="relative z-10 flex items-center justify-between text-xs text-zinc-500 pt-6 border-t border-violet-900/30">
           <div className="flex items-center gap-2">
-            <ShieldCheck size={16} className="text-indigo-400" />
+            <ShieldCheck size={16} className="text-violet-400" />
             <span>Dados protegidos com criptografia e RLS</span>
           </div>
           <span>© 2026 Agenda AI Inc.</span>
@@ -79,7 +79,7 @@ export function AuthLayout() {
         <div className="flex justify-end items-center">
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/80 transition-colors"
+            className="p-2.5 rounded-xl text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-colors"
             title="Alternar tema"
           >
             {isDark ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
@@ -92,7 +92,7 @@ export function AuthLayout() {
 
         <div className="text-center text-xs text-zinc-400 pt-6">
           Precisa de ajuda?{' '}
-          <a href="mailto:suporte@agendaai.com" className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">
+          <a href="mailto:suporte@agendaai.com" className="text-violet-600 dark:text-violet-400 font-semibold hover:underline">
             Fale com nosso suporte
           </a>
         </div>

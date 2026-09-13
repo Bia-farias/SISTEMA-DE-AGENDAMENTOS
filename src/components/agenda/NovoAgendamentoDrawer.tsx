@@ -198,7 +198,7 @@ export function NovoAgendamentoDrawer() {
             <button
               type="button"
               onClick={() => setIsCreatingCustomer(!isCreatingCustomer)}
-              className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1"
+              className="text-xs font-semibold text-violet-600 dark:text-violet-400 hover:underline flex items-center gap-1"
             >
               {isCreatingCustomer ? 'Selecionar existente' : '+ Cadastrar novo'}
             </button>
@@ -237,11 +237,11 @@ export function NovoAgendamentoDrawer() {
         <div className="space-y-1.5">
           <div className="flex items-center justify-between">
             <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider flex items-center gap-1.5">
-              <Scissors size={14} className="text-indigo-500" />
+              <Scissors size={14} className="text-violet-500" />
               Serviço
             </label>
             {selectedService && (
-              <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400">
+              <span className="text-xs font-bold text-violet-600 dark:text-violet-400">
                 {formatCurrency(selectedService.price)} • {selectedService.duration_minutes} min
               </span>
             )}
@@ -261,7 +261,7 @@ export function NovoAgendamentoDrawer() {
         {/* Professional Selection */}
         <div className="space-y-1.5">
           <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider flex items-center gap-1.5">
-            <User size={14} className="text-indigo-500" />
+            <User size={14} className="text-violet-500" />
             Profissional Responsável
           </label>
           <Select
@@ -295,11 +295,11 @@ export function NovoAgendamentoDrawer() {
                 type="time"
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
-                className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 text-sm px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+                className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 text-sm px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-400/30 focus:border-violet-400"
                 required
               />
               <span className="text-xs text-zinc-400 font-medium">até</span>
-              <div className="px-3 py-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700 text-xs font-bold text-zinc-600 dark:text-zinc-300 shrink-0">
+              <div className="px-3 py-2.5 rounded-xl bg-violet-50/60 dark:bg-zinc-800/60 border border-violet-100 dark:border-zinc-700 text-xs font-bold text-violet-700 dark:text-zinc-300 shrink-0">
                 {endTime}
               </div>
             </div>
@@ -324,7 +324,7 @@ export function NovoAgendamentoDrawer() {
             <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider">
               Valor Total
             </label>
-            <div className="w-full px-3.5 py-2.5 rounded-xl bg-indigo-50/60 dark:bg-indigo-500/10 border border-indigo-200/60 dark:border-indigo-500/20 text-sm font-extrabold text-indigo-700 dark:text-indigo-300">
+            <div className="w-full px-3.5 py-2.5 rounded-xl bg-violet-50/60 dark:bg-violet-500/10 border border-violet-200/60 dark:border-violet-500/20 text-sm font-extrabold text-violet-700 dark:text-violet-300">
               {formatCurrency(selectedService?.price || 0)}
             </div>
           </div>
@@ -340,7 +340,7 @@ export function NovoAgendamentoDrawer() {
             onChange={(e) => setNotes(e.target.value)}
             rows={2}
             placeholder="Ex: Cliente prefere atendimento pontual, alergia a produtos..."
-            className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 text-sm p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+            className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 text-sm p-3 focus:outline-none focus:ring-2 focus:ring-violet-400/30 focus:border-violet-400"
           />
         </div>
       </form>

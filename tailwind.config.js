@@ -9,31 +9,31 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1', // Indigo Primário
-          600: '#4f46e5', // Ações / Botões
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
+          50:  '#f5f3ff', // Violet 50  — fundos levíssimos
+          100: '#ede9fe', // Violet 100 — hover, badges
+          200: '#ddd6fe', // Violet 200 — bordas ativas
+          300: '#c4b5fd', // Violet 300 — ícones suaves
+          400: '#a78bfa', // Violet 400 — estados secundários
+          500: '#8b5cf6', // Violet 500 — botão primário
+          600: '#7c3aed', // Violet 600 — hover de botão
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+          950: '#2e1065',
         },
         surface: {
           light: '#ffffff',
-          lightMuted: '#f8fafc',
-          dark: '#09090b',     // Zinc 950
-          cardDark: '#121215', // Zinc 900 custom deep
+          lightMuted: '#faf9ff', // Quase branco com toque lilás imperceptível
+          dark: '#09090b',
+          cardDark: '#121215',
           cardLight: '#ffffff',
-          borderDark: '#27272a', // Zinc 800
-          borderLight: '#e2e8f0', // Zinc 200
+          borderDark: '#27272a',
+          borderLight: '#ede9fe', // Violet 100 — bordas suaves
         },
         status: {
           pending: '#eab308',   // Amarelo
           confirmed: '#22c55e', // Verde
-          completed: '#3b82f6', // Azul
+          completed: '#8b5cf6', // Violet (alinhado com paleta)
           cancelled: '#ef4444', // Vermelho
         }
       },
@@ -44,6 +44,7 @@ export default {
         'slide-in-right': 'slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         'fade-in': 'fadeIn 0.2s ease-out',
         'pulse-slow': 'pulseSlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
       keyframes: {
         slideInRight: {
@@ -51,12 +52,16 @@ export default {
           '100%': { transform: 'translateX(0)' },
         },
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { opacity: '0', transform: 'translateY(4px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         pulseSlow: {
           '0%, 100%': { opacity: '1', transform: 'scale(1)' },
           '50%': { opacity: '0.85', transform: 'scale(1.05)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
       }
     },

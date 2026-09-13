@@ -20,7 +20,7 @@ export function MobileBottomNav() {
   ];
 
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-[#101014]/95 backdrop-blur-md border-t border-zinc-200/80 dark:border-zinc-800/80 px-3 py-2 flex items-center justify-around">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-[#13101e]/95 backdrop-blur-md border-t border-violet-100/80 dark:border-violet-900/30 px-3 py-2 flex items-center justify-around shadow-[0_-4px_16px_rgba(139,92,246,0.06)]">
       {navItems.slice(0, 2).map((item) => {
         const Icon = item.icon;
         return (
@@ -31,7 +31,7 @@ export function MobileBottomNav() {
               cn(
                 'flex flex-col items-center gap-1 text-[10px] font-medium py-1 px-3 rounded-xl transition-colors',
                 isActive
-                  ? 'text-indigo-600 dark:text-indigo-400 font-bold'
+                  ? 'text-violet-600 dark:text-violet-300 font-bold'
                   : 'text-zinc-500 dark:text-zinc-400'
               )
             }
@@ -45,7 +45,7 @@ export function MobileBottomNav() {
       {/* Floating Center Plus Action */}
       <button
         onClick={() => openNewAppointmentDrawer()}
-        className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 -mt-5 border-4 border-zinc-50 dark:border-[#09090b] active:scale-95 transition-transform"
+        className="w-12 h-12 rounded-full bg-violet-500 hover:bg-violet-600 text-white flex items-center justify-center shadow-lg shadow-violet-400/30 -mt-5 border-4 border-[#faf9ff] dark:border-[#0d0b14] active:scale-95 transition-transform"
         aria-label="Novo Agendamento"
       >
         <Plus size={22} />
@@ -61,7 +61,7 @@ export function MobileBottomNav() {
               cn(
                 'flex flex-col items-center gap-1 text-[10px] font-medium py-1 px-3 rounded-xl transition-colors',
                 isActive
-                  ? 'text-indigo-600 dark:text-indigo-400 font-bold'
+                  ? 'text-violet-600 dark:text-violet-300 font-bold'
                   : 'text-zinc-500 dark:text-zinc-400'
               )
             }

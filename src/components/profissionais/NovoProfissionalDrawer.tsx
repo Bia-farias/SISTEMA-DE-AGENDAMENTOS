@@ -27,7 +27,7 @@ export function NovoProfissionalDrawer() {
   const [specialtiesText, setSpecialtiesText] = useState('');
   const [startTime, setStartTime] = useState('09:00');
   const [endTime, setEndTime] = useState('19:00');
-  const [color, setColor] = useState('#6366f1');
+  const [color, setColor] = useState('#8b5cf6');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export function NovoProfissionalDrawer() {
       setSpecialtiesText(editingProf.specialties.join(', '));
       setStartTime(editingProf.working_hours?.start || '09:00');
       setEndTime(editingProf.working_hours?.end || '19:00');
-      setColor(editingProf.color || '#6366f1');
+      setColor(editingProf.color || '#8b5cf6');
     } else {
       setName('');
       setRole('');
@@ -50,7 +50,7 @@ export function NovoProfissionalDrawer() {
       setSpecialtiesText('');
       setStartTime('09:00');
       setEndTime('19:00');
-      setColor('#6366f1');
+      setColor('#8b5cf6');
     }
   }, [editingProf, isOpen]);
 
@@ -224,7 +224,7 @@ export function NovoProfissionalDrawer() {
               type="time"
               value={startTime}
               onChange={(e) => setStartTime(e.target.value)}
-              className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 text-sm px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+              className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 text-sm px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-400/30 focus:border-violet-400"
             />
           </div>
 
@@ -236,7 +236,7 @@ export function NovoProfissionalDrawer() {
               type="time"
               value={endTime}
               onChange={(e) => setEndTime(e.target.value)}
-              className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 text-sm px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+              className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 text-sm px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-400/30 focus:border-violet-400"
             />
           </div>
         </div>

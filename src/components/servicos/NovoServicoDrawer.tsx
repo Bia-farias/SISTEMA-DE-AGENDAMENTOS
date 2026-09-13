@@ -25,7 +25,7 @@ export function NovoServicoDrawer() {
   const [category, setCategory] = useState('Cabelo');
   const [price, setPrice] = useState('80');
   const [durationMinutes, setDurationMinutes] = useState('45');
-  const [color, setColor] = useState('#6366f1');
+  const [color, setColor] = useState('#8b5cf6');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -35,14 +35,14 @@ export function NovoServicoDrawer() {
       setCategory(editingService.category);
       setPrice(String(editingService.price));
       setDurationMinutes(String(editingService.duration_minutes));
-      setColor(editingService.color || '#6366f1');
+      setColor(editingService.color || '#8b5cf6');
     } else {
       setName('');
       setDescription('');
       setCategory('Cabelo');
       setPrice('80');
       setDurationMinutes('45');
-      setColor('#6366f1');
+      setColor('#8b5cf6');
     }
   }, [editingService, isOpen]);
 
@@ -212,7 +212,7 @@ export function NovoServicoDrawer() {
             onChange={(e) => setDescription(e.target.value)}
             rows={3}
             placeholder="Detalhes dos produtos inclusos, etapas do procedimento..."
-            className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 text-sm p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+            className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 text-sm p-3 focus:outline-none focus:ring-2 focus:ring-violet-400/30 focus:border-violet-400"
           />
         </div>
       </form>

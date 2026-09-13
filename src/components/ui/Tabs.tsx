@@ -18,7 +18,7 @@ export function Tabs({ tabs, activeTab, onChange, className }: TabsProps) {
   return (
     <div
       className={cn(
-        'flex items-center gap-1 p-1 bg-zinc-100 dark:bg-zinc-900/90 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 overflow-x-auto no-scrollbar',
+        'flex items-center gap-1 p-1 bg-violet-50/50 dark:bg-zinc-900/90 rounded-2xl border border-violet-100/80 dark:border-violet-900/30 overflow-x-auto no-scrollbar',
         className
       )}
     >
@@ -31,8 +31,8 @@ export function Tabs({ tabs, activeTab, onChange, className }: TabsProps) {
             className={cn(
               'flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl transition-all duration-150 whitespace-nowrap select-none',
               isActive
-                ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm border border-zinc-200/50 dark:border-zinc-700/50'
-                : 'text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 hover:bg-zinc-200/40 dark:hover:bg-zinc-800/40'
+                ? 'bg-white dark:bg-[#1a1626] text-violet-700 dark:text-violet-300 shadow-sm border border-violet-200/80 dark:border-violet-500/30'
+                : 'text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 hover:bg-violet-50/50 dark:hover:bg-violet-500/10'
             )}
           >
             {tab.icon && <span>{tab.icon}</span>}
@@ -42,7 +42,7 @@ export function Tabs({ tabs, activeTab, onChange, className }: TabsProps) {
                 className={cn(
                   'px-1.5 py-0.5 rounded-full text-[10px] font-bold leading-none',
                   isActive
-                    ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400'
+                    ? 'bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300'
                     : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
                 )}
               >

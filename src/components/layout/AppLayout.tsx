@@ -14,7 +14,7 @@ import { AIFloatingButton } from '../ai/AIFloatingButton';
 
 export function AppLayout() {
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-zinc-50 dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 font-sans antialiased">
+    <div className="flex h-screen w-screen overflow-hidden bg-[#faf9ff] dark:bg-[#0d0b14] text-zinc-900 dark:text-zinc-100 font-sans antialiased">
       {/* Desktop Sidebar */}
       <Sidebar />
 

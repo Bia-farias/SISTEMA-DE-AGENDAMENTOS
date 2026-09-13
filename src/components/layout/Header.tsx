@@ -5,10 +5,8 @@ import {
   Moon,
   Plus,
   Search,
-  Sparkles,
   Calendar,
   UserPlus,
-  CheckCircle2,
 } from 'lucide-react';
 import { useAuthStore } from '../../stores/authStore';
 import { useThemeStore } from '../../stores/themeStore';
@@ -52,35 +50,35 @@ export function Header() {
 
   return (
     <>
-      <header className="h-16 border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-[#0e0e11]/80 backdrop-blur-md px-4 lg:px-6 flex items-center justify-between sticky top-0 z-20">
-        {/* Left Side: Mobile Logo & Global Search / Breadcrumb */}
+      <header className="h-16 border-b border-violet-100/70 dark:border-violet-900/20 bg-white/90 dark:bg-[#13101e]/90 backdrop-blur-md px-4 lg:px-6 flex items-center justify-between sticky top-0 z-20 shadow-[0_1px_12px_rgba(139,92,246,0.04)]">
+        {/* Left Side: Mobile Logo & Global Search */}
         <div className="flex items-center gap-3">
           <div className="flex lg:hidden items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-bold text-sm shadow-md">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-400 to-violet-300 flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-violet-300/30">
               A
             </div>
-            <span className="font-extrabold text-sm tracking-tight text-zinc-900 dark:text-zinc-50">
+            <span className="font-extrabold text-sm tracking-tight text-zinc-800 dark:text-zinc-50">
               Agenda AI
             </span>
           </div>
 
-          <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 text-xs text-zinc-400 w-64 lg:w-80">
-            <Search size={14} className="shrink-0" />
+          <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-violet-50/60 dark:bg-violet-500/5 border border-violet-100/80 dark:border-violet-800/30 text-xs text-zinc-400 w-64 lg:w-80 transition-all hover:border-violet-200/80 hover:bg-violet-50 dark:hover:bg-violet-500/10 cursor-pointer">
+            <Search size={13} className="shrink-0 text-violet-300 dark:text-violet-500" />
             <span className="truncate">Buscar clientes, horários ou serviços...</span>
-            <kbd className="hidden lg:inline-block ml-auto text-[10px] bg-zinc-200 dark:bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-500 font-mono">
+            <kbd className="hidden lg:inline-block ml-auto text-[10px] bg-white dark:bg-violet-500/10 border border-violet-100 dark:border-violet-700/30 px-1.5 py-0.5 rounded text-violet-400 font-mono shadow-sm">
               Ctrl K
             </kbd>
           </div>
         </div>
 
         {/* Right Side: Actions, Notifications, Theme Toggle, Profile */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           {/* Quick Action Button: New Appointment */}
           <Button
             size="sm"
-            leftIcon={<Plus size={16} />}
+            leftIcon={<Plus size={15} />}
             onClick={() => openNewAppointmentDrawer()}
-            className="hidden sm:inline-flex shadow-sm shadow-indigo-500/20"
+            className="hidden sm:inline-flex shadow-sm shadow-violet-400/20"
           >
             Novo Agendamento
           </Button>
@@ -88,35 +86,35 @@ export function Header() {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-xl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 transition-colors"
+            className="p-2 rounded-xl text-zinc-400 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all duration-150"
             title={isDark ? 'Mudar para tema claro' : 'Mudar para tema escuro'}
             aria-label="Alternar tema"
           >
-            {isDark ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
+            {isDark ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} />}
           </button>
 
           {/* Notifications Button */}
           <button
             onClick={() => setIsNotificationsOpen(true)}
-            className="relative p-2 rounded-xl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 transition-colors"
+            className="relative p-2 rounded-xl text-zinc-400 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all duration-150"
             title="Notificações"
             aria-label="Notificações"
           >
-            <Bell size={18} />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-indigo-600 ring-2 ring-white dark:ring-zinc-900" />
+            <Bell size={17} />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-violet-400 ring-2 ring-white dark:ring-[#13101e]" />
           </button>
 
           {/* User Avatar Menu Trigger */}
-          <div className="relative pl-1 border-l border-zinc-200 dark:border-zinc-800">
+          <div className="relative pl-2 border-l border-violet-100/80 dark:border-violet-800/30">
             <button
               onClick={() => setIsQuickMenuOpen(!isQuickMenuOpen)}
-              className="flex items-center gap-2 p-1 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800/80 transition-colors"
+              className="flex items-center gap-2 p-1 rounded-xl hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all duration-150"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 text-white font-bold flex items-center justify-center text-xs shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-violet-400 to-violet-300 text-white font-bold flex items-center justify-center text-xs shadow-sm shadow-violet-300/30">
                 {profile?.full_name?.substring(0, 2).toUpperCase() || 'AD'}
               </div>
               <div className="hidden xl:block text-left text-xs pr-1">
-                <p className="font-semibold text-zinc-900 dark:text-zinc-100 leading-tight">
+                <p className="font-semibold text-zinc-800 dark:text-zinc-100 leading-tight">
                   {profile?.full_name || 'Admin'}
                 </p>
                 <p className="text-[10px] text-zinc-400">{tenant?.name || 'Studio'}</p>
@@ -130,9 +128,9 @@ export function Header() {
                   className="fixed inset-0 z-40"
                   onClick={() => setIsQuickMenuOpen(false)}
                 />
-                <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl py-2 z-50 animate-fade-in text-xs">
-                  <div className="px-4 py-2 border-b border-zinc-100 dark:border-zinc-800">
-                    <p className="font-bold text-zinc-900 dark:text-zinc-100">{profile?.full_name}</p>
+                <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-white dark:bg-[#1a1626] border border-violet-100/80 dark:border-violet-800/30 shadow-xl shadow-violet-200/30 dark:shadow-violet-900/20 py-2 z-50 animate-fade-in text-xs">
+                  <div className="px-4 py-2.5 border-b border-violet-50 dark:border-violet-800/20">
+                    <p className="font-bold text-zinc-800 dark:text-zinc-100">{profile?.full_name}</p>
                     <p className="text-zinc-400 text-[11px] truncate">{profile?.email}</p>
                   </div>
                   <div className="py-1">
@@ -141,9 +139,9 @@ export function Header() {
                         setIsQuickMenuOpen(false);
                         openNewAppointmentDrawer();
                       }}
-                      className="w-full text-left px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 flex items-center gap-2"
+                      className="w-full text-left px-4 py-2 hover:bg-violet-50 dark:hover:bg-violet-500/10 text-zinc-600 dark:text-zinc-300 flex items-center gap-2 transition-colors"
                     >
-                      <Calendar size={14} className="text-indigo-500" />
+                      <Calendar size={14} className="text-violet-400" />
                       Agendar Horário
                     </button>
                     <button
@@ -151,19 +149,19 @@ export function Header() {
                         setIsQuickMenuOpen(false);
                         openNewCustomerDrawer();
                       }}
-                      className="w-full text-left px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 flex items-center gap-2"
+                      className="w-full text-left px-4 py-2 hover:bg-violet-50 dark:hover:bg-violet-500/10 text-zinc-600 dark:text-zinc-300 flex items-center gap-2 transition-colors"
                     >
                       <UserPlus size={14} className="text-emerald-500" />
                       Cadastrar Cliente
                     </button>
                   </div>
-                  <div className="pt-1 border-t border-zinc-100 dark:border-zinc-800">
+                  <div className="pt-1 border-t border-violet-50 dark:border-violet-800/20">
                     <button
                       onClick={() => {
                         setIsQuickMenuOpen(false);
                         logout();
                       }}
-                      className="w-full text-left px-4 py-2 hover:bg-rose-50 dark:hover:bg-rose-500/10 text-rose-600 dark:text-rose-400 font-medium"
+                      className="w-full text-left px-4 py-2 hover:bg-rose-50 dark:hover:bg-rose-500/10 text-rose-500 dark:text-rose-400 font-medium transition-colors"
                     >
                       Sair da Conta
                     </button>
@@ -181,7 +179,7 @@ export function Header() {
         onClose={() => setIsNotificationsOpen(false)}
         title={
           <span className="flex items-center gap-2">
-            <Bell size={18} className="text-indigo-500" />
+            <Bell size={17} className="text-violet-400" />
             Notificações Recentes
           </span>
         }
@@ -194,19 +192,19 @@ export function Header() {
               key={n.id}
               className={`p-4 rounded-xl border transition-all ${
                 n.unread
-                  ? 'bg-indigo-50/50 dark:bg-indigo-500/5 border-indigo-200/60 dark:border-indigo-500/20'
-                  : 'bg-zinc-50 dark:bg-zinc-900/40 border-zinc-200/60 dark:border-zinc-800'
+                  ? 'bg-violet-50/60 dark:bg-violet-500/5 border-violet-200/50 dark:border-violet-500/15'
+                  : 'bg-white dark:bg-white/5 border-zinc-100 dark:border-zinc-800/40'
               }`}
             >
               <div className="flex items-start justify-between gap-2">
-                <h4 className="font-bold text-xs text-zinc-900 dark:text-zinc-100">
+                <h4 className="font-bold text-xs text-zinc-800 dark:text-zinc-100">
                   {n.title}
                 </h4>
                 {n.unread && (
-                  <span className="w-2 h-2 rounded-full bg-indigo-600 shrink-0 mt-1" />
+                  <span className="w-2 h-2 rounded-full bg-violet-400 shrink-0 mt-1" />
                 )}
               </div>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1 leading-relaxed">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">
                 {n.description}
               </p>
               <span className="text-[10px] text-zinc-400 mt-2 block font-medium">

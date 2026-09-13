@@ -59,7 +59,7 @@ function renderContent(text: string): React.ReactNode {
     if (line.trim().startsWith('• ') || line.trim().startsWith('- ')) {
       elements.push(
         <li key={i} className="ml-3 list-none flex gap-1.5 items-start">
-          <span className="text-indigo-400 mt-0.5 shrink-0">•</span>
+          <span className="text-violet-400 mt-0.5 shrink-0">•</span>
           <span>{inlineFormat(line.replace(/^[\s•\-]+/, ''))}</span>
         </li>
       );
@@ -84,7 +84,7 @@ function renderContent(text: string): React.ReactNode {
       const num = line.trim().match(/^(\d+)\./)?.[1];
       elements.push(
         <li key={i} className="ml-3 list-none flex gap-1.5 items-start">
-          <span className="text-indigo-400 font-bold shrink-0">{num}.</span>
+          <span className="text-violet-400 font-bold shrink-0">{num}.</span>
           <span>{inlineFormat(line.replace(/^\s*\d+\.\s/, ''))}</span>
         </li>
       );

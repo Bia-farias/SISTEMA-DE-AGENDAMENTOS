@@ -171,7 +171,7 @@ export function NovoClienteDrawer() {
         />
 
         {/* VIP Switch */}
-        <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 flex items-center justify-between">
+        <div className="p-3.5 rounded-xl bg-amber-500/5 dark:bg-amber-500/10 border border-amber-200/60 dark:border-amber-500/20 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="p-2 rounded-lg bg-amber-500/10 text-amber-500 border border-amber-500/20">
               <Sparkles size={16} />
@@ -203,7 +203,7 @@ export function NovoClienteDrawer() {
             onChange={(e) => setNotes(e.target.value)}
             rows={3}
             placeholder="Ex: Prefere tons nudes, alérgica a esmalte tradicional, café com adoçante..."
-            className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 text-sm p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500"
+            className="w-full rounded-xl bg-zinc-50/80 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 text-sm p-3 focus:outline-none focus:ring-2 focus:ring-violet-400/30 focus:border-violet-400"
           />
         </div>
       </form>

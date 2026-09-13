@@ -23,11 +23,11 @@ export function StatsCard({
   subtitle,
   icon,
   trend,
-  color = 'indigo',
+  color = 'violet',
   className,
 }: StatsCardProps) {
   const iconColors = {
-    indigo: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20',
+    indigo: 'bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20',
     emerald: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
     amber: 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20',
     sky: 'bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/20',

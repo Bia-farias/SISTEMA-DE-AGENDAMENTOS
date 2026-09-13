@@ -119,7 +119,7 @@ export function ClienteDetalheDrawer() {
     >
       <div className="space-y-6">
         {/* Customer Header Card */}
-        <div className="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+        <div className="p-5 rounded-2xl bg-violet-50/40 dark:bg-[#181424] border border-violet-100 dark:border-violet-900/30 flex flex-col sm:flex-row items-center sm:items-start gap-4">
           <Avatar name={customer.name} size="xl" className="shadow-md" />
           <div className="flex-1 text-center sm:text-left space-y-1.5">
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
@@ -135,18 +135,18 @@ export function ClienteDetalheDrawer() {
 
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-xs text-zinc-500 dark:text-zinc-400 pt-1">
               <span className="flex items-center gap-1">
-                <Phone size={13} className="text-indigo-500" />
+                <Phone size={13} className="text-violet-500" />
                 {formatPhone(customer.phone)}
               </span>
               {customer.email && (
                 <span className="flex items-center gap-1">
-                  <Mail size={13} className="text-indigo-500" />
+                  <Mail size={13} className="text-violet-500" />
                   {customer.email}
                 </span>
               )}
               {customer.birth_date && (
                 <span className="flex items-center gap-1">
-                  <Calendar size={13} className="text-indigo-500" />
+                  <Calendar size={13} className="text-violet-500" />
                   Niver: {formatDate(customer.birth_date)}
                 </span>
               )}
@@ -167,16 +167,16 @@ export function ClienteDetalheDrawer() {
 
         {/* Lifetime Value & Visits KPIs */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 text-center">
+          <div className="p-4 rounded-xl bg-violet-50/30 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 text-center">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider block">
               Total Investido
             </span>
-            <span className="text-lg font-extrabold text-indigo-600 dark:text-indigo-400 mt-1 block">
+            <span className="text-lg font-extrabold text-violet-600 dark:text-violet-400 mt-1 block">
               {formatCurrency(customer.total_spent || 0)}
             </span>
           </div>
 
-          <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 text-center">
+          <div className="p-4 rounded-xl bg-violet-50/30 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 text-center">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider block">
               Atendimentos
             </span>
@@ -185,7 +185,7 @@ export function ClienteDetalheDrawer() {
             </span>
           </div>
 
-          <div className="col-span-2 sm:col-span-1 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 text-center">
+          <div className="col-span-2 sm:col-span-1 p-4 rounded-xl bg-violet-50/30 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 text-center">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider block">
               Última Visita
             </span>
@@ -224,7 +224,7 @@ export function ClienteDetalheDrawer() {
               {customerAppointments.map((apt) => (
                 <div
                   key={apt.id}
-                  className="p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200/60 dark:border-zinc-800 flex items-center justify-between text-xs"
+                  className="p-3 rounded-xl bg-white dark:bg-[#181424] border border-violet-100/80 dark:border-violet-900/30 shadow-sm flex items-center justify-between text-xs"
                 >
                   <div className="space-y-0.5">
                     <p className="font-bold text-zinc-800 dark:text-zinc-200">

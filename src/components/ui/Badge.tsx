@@ -17,7 +17,7 @@ export function Badge({
 }: BadgeProps) {
   const variants = {
     primary:
-      'bg-indigo-50 text-indigo-700 border-indigo-200/80 dark:bg-indigo-500/10 dark:text-indigo-400 dark:border-indigo-500/20',
+      'bg-violet-50 text-violet-700 border-violet-200/80 dark:bg-violet-500/10 dark:text-violet-300 dark:border-violet-500/20',
     success:
       'bg-emerald-50 text-emerald-700 border-emerald-200/80 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/20',
     warning:
@@ -31,7 +31,7 @@ export function Badge({
   };
 
   const dotColors = {
-    primary: 'bg-indigo-500',
+    primary: 'bg-violet-500',
     success: 'bg-emerald-500',
     warning: 'bg-amber-500',
     danger: 'bg-rose-500',

@@ -9,9 +9,9 @@ export function Card({ children, className, hoverEffect = false, ...props }: Car
   return (
     <div
       className={cn(
-        'bg-white dark:bg-[#121215] border border-zinc-200/80 dark:border-zinc-800/80 rounded-2xl p-5 shadow-sm transition-all duration-200',
+        'bg-white dark:bg-[#13101e] border border-violet-100/70 dark:border-violet-900/30 rounded-2xl p-5 shadow-sm transition-all duration-200',
         hoverEffect &&
-          'hover:shadow-md hover:border-zinc-300 dark:hover:border-zinc-700/90 hover:translate-y-[-1px]',
+          'hover:shadow-md hover:border-violet-200 dark:hover:border-violet-800/60 hover:translate-y-[-1px]',
         className
       )}
       {...props}
@@ -35,7 +35,7 @@ export function CardHeader({
   return (
     <div
       className={cn(
-        'flex items-center justify-between gap-4 pb-4 mb-4 border-b border-zinc-100 dark:border-zinc-800/60',
+        'flex items-center justify-between gap-4 pb-4 mb-4 border-b border-violet-100/60 dark:border-violet-900/20',
         className
       )}
     >

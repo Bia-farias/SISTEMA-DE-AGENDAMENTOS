@@ -136,10 +136,10 @@ export function AgendamentoDetalheDrawer() {
     >
       <div className="space-y-6">
         {/* Customer Highlight Card */}
-        <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-50/70 to-zinc-50 dark:from-indigo-950/20 dark:to-zinc-900/50 border border-indigo-100 dark:border-indigo-900/30 space-y-3">
+        <div className="p-4 rounded-2xl bg-gradient-to-br from-violet-50/70 to-purple-50/30 dark:from-violet-950/20 dark:to-[#181424] border border-violet-100 dark:border-violet-900/30 space-y-3">
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
+              <p className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider">
                 Cliente
               </p>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50 mt-0.5">
@@ -164,9 +164,9 @@ export function AgendamentoDetalheDrawer() {
 
         {/* Info Grid */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 space-y-1">
+          <div className="p-3.5 rounded-xl bg-violet-50/20 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 space-y-1">
             <span className="text-[11px] font-semibold text-zinc-400 uppercase flex items-center gap-1">
-              <Calendar size={13} className="text-indigo-500" />
+              <Calendar size={13} className="text-violet-500" />
               Data
             </span>
             <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
@@ -174,9 +174,9 @@ export function AgendamentoDetalheDrawer() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 space-y-1">
+          <div className="p-3.5 rounded-xl bg-violet-50/20 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 space-y-1">
             <span className="text-[11px] font-semibold text-zinc-400 uppercase flex items-center gap-1">
-              <Clock size={13} className="text-indigo-500" />
+              <Clock size={13} className="text-violet-500" />
               Horário
             </span>
             <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
@@ -187,9 +187,9 @@ export function AgendamentoDetalheDrawer() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 space-y-1">
+          <div className="p-3.5 rounded-xl bg-violet-50/20 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 space-y-1">
             <span className="text-[11px] font-semibold text-zinc-400 uppercase flex items-center gap-1">
-              <Scissors size={13} className="text-indigo-500" />
+              <Scissors size={13} className="text-violet-500" />
               Serviço
             </span>
             <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate">
@@ -197,9 +197,9 @@ export function AgendamentoDetalheDrawer() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 space-y-1">
+          <div className="p-3.5 rounded-xl bg-violet-50/20 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 space-y-1">
             <span className="text-[11px] font-semibold text-zinc-400 uppercase flex items-center gap-1">
-              <User size={13} className="text-indigo-500" />
+              <User size={13} className="text-violet-500" />
               Profissional
             </span>
             <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate">
@@ -209,7 +209,7 @@ export function AgendamentoDetalheDrawer() {
         </div>
 
         {/* Financial & Price Card */}
-        <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800 flex items-center justify-between">
+        <div className="p-4 rounded-xl bg-violet-50/20 dark:bg-[#181424] border border-violet-100/70 dark:border-violet-900/30 flex items-center justify-between">
           <div>
             <span className="text-xs text-zinc-400 block font-medium">Valor do Atendimento</span>
             <span className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100">

@@ -78,12 +78,12 @@ export function Drawer({
             'pointer-events-auto w-screen transition-transform duration-300 ease-out transform',
             sizeClasses[size],
             position === 'right' ? 'animate-slide-in-right' : 'animate-slide-in-left',
-            'bg-white dark:bg-[#121215] border-l border-zinc-200 dark:border-zinc-800 shadow-2xl flex flex-col',
+            'bg-white dark:bg-[#13101e] border-l border-violet-100 dark:border-violet-900/30 shadow-2xl flex flex-col',
             className
           )}
         >
           {/* Header */}
-          <div className="px-6 py-5 border-b border-zinc-100 dark:border-zinc-800/80 flex items-start justify-between bg-zinc-50/50 dark:bg-zinc-900/30">
+          <div className="px-6 py-5 border-b border-violet-100/60 dark:border-violet-900/20 flex items-start justify-between bg-violet-50/20 dark:bg-violet-950/10">
             <div>
               {title && (
                 <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
@@ -98,7 +98,7 @@ export function Drawer({
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors -mr-2"
+              className="p-2 rounded-lg text-zinc-400 hover:text-violet-600 dark:hover:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-colors -mr-2"
               aria-label="Fechar painel"
             >
               <X size={18} />
@@ -112,7 +112,7 @@ export function Drawer({
 
           {/* Footer */}
           {footer && (
-            <div className="px-6 py-4 border-t border-zinc-100 dark:border-zinc-800/80 bg-zinc-50/80 dark:bg-zinc-900/50 flex items-center justify-end gap-3">
+            <div className="px-6 py-4 border-t border-violet-100/60 dark:border-violet-900/20 bg-violet-50/20 dark:bg-violet-950/10 flex items-center justify-end gap-3">
               {footer}
             </div>
           )}
