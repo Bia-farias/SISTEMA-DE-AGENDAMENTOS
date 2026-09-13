@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './stores/authStore';
 
 // Layouts
@@ -26,7 +26,7 @@ export default function App() {
   }, [initialize]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <React.Suspense
         fallback={
           <div className="h-screen w-full flex items-center justify-center bg-zinc-50 dark:bg-[#09090b]">
@@ -65,6 +65,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </React.Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
