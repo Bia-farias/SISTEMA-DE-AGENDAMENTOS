@@ -1,0 +1,201 @@
+// ==============================================================================
+// AGENDA AI — SCHEMA PRISMA ORM (POSTGRESQL)
+// Mapeado de acordo com o Frontend (React 18 + TypeScript + Zustand)
+// ==============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ------------------------------------------------------------------------------
+// ENUMS
+// ------------------------------------------------------------------------------
+
+enum UserRole {
+  OWNER
+  ADMIN
+  PROFESSIONAL
+  RECEPTIONIST
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+enum TenantPlan {
+  FREE
+  STARTER
+  PRO
+  ENTERPRISE
+}
+
+enum BusinessType {
+  BARBERSHOP
+  BEAUTY_SALON
+  AESTHETIC_CLINIC
+  HEALTH_CLINIC
+  OTHER
+}
+
+enum PaymentMethod {
+  PIX
+  CREDIT_CARD
+  DEBIT_CARD
+  CASH
+  UNPAID
+}
+
+// ------------------------------------------------------------------------------
+// MODELOS PRINCIPAIS
+// ------------------------------------------------------------------------------
+
+model Tenant {
+  id                 String       @id @default(uuid())
+  name               String
+  slug               String       @unique
+  plan               TenantPlan   @default(PRO)
+  businessType       BusinessType @default(BEAUTY_SALON)
+  phone              String?
+  email              String?
+  logoUrl            String?
+  address            String?
+  openingTime        String       @default("08:00")
+  closingTime        String       @default("20:00")
+  intervalMinutes    Int          @default(30)
+  allowOnlineBooking Boolean      @default(true)
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+
+  // Relacionamentos
+  users         User[]
+  clients       Client[]
+  professionals Professional[]
+  services      Service[]
+  appointments  Appointment[]
+
+  @@map("tenants")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  tenantId  String
+  tenant    Tenant   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  email     String
+  password  String // Hash bcrypt
+  fullName  String
+  role      UserRole @default(OWNER)
+  phone     String?
+  avatarUrl String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Vínculo opcional se o usuário for um profissional da equipe
+  professional Professional?
+
+  @@unique([tenantId, email])
+  @@index([tenantId])
+  @@map("users")
+}
+
+model Client {
+  id        String    @id @default(uuid())
+  tenantId  String
+  tenant    Tenant    @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  name      String
+  email     String?
+  phone     String
+  birthDate DateTime?
+  notes     String?
+  isVip     Boolean   @default(false)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  appointments Appointment[]
+
+  @@index([tenantId, name])
+  @@index([tenantId, phone])
+  @@map("clients")
+}
+
+model Professional {
+  id                   String   @id @default(uuid())
+  tenantId             String
+  tenant               Tenant   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  userId               String?  @unique
+  user                 User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  name                 String
+  email                String?
+  phone                String?
+  avatarUrl            String?
+  role                 String   @default("Especialista")
+  specialties          String[] @default([])
+  commissionPercentage Decimal  @default(0.00) @db.Decimal(5, 2)
+  color                String?  @default("#6366f1")
+  isActive             Boolean  @default(true)
+  workingHoursStart    String   @default("09:00")
+  workingHoursEnd      String   @default("19:00")
+  workingDays          Int[]    @default([1, 2, 3, 4, 5, 6]) // 0=Dom, 1=Seg...
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  appointments Appointment[]
+
+  @@index([tenantId, isActive])
+  @@map("professionals")
+}
+
+model Service {
+  id              String   @id @default(uuid())
+  tenantId        String
+  tenant          Tenant   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  name            String
+  description     String?
+  category        String   @default("Geral")
+  price           Decimal  @db.Decimal(10, 2)
+  durationMinutes Int      @default(30)
+  color           String?  @default("#6366f1")
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  appointments Appointment[]
+
+  @@index([tenantId, isActive])
+  @@map("services")
+}
+
+model Appointment {
+  id              String            @id @default(uuid())
+  tenantId        String
+  tenant          Tenant            @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  clientId        String
+  client          Client            @relation(fields: [clientId], references: [id], onDelete: Restrict)
+  serviceId       String
+  service         Service           @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+  professionalId  String
+  professional    Professional      @relation(fields: [professionalId], references: [id], onDelete: Restrict)
+  date            String // Formato YYYY-MM-DD
+  startTime       String // Formato HH:mm
+  endTime         String // Formato HH:mm
+  durationMinutes Int
+  status          AppointmentStatus @default(PENDING)
+  paymentMethod   PaymentMethod     @default(UNPAID)
+  totalPrice      Decimal           @db.Decimal(10, 2)
+  notes           String?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  @@index([tenantId, date, startTime])
+  @@index([professionalId, date])
+  @@index([clientId])
+  @@map("appointments")
+}
