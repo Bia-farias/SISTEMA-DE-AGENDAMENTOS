@@ -17,6 +17,7 @@ const Clientes = React.lazy(() => import('./pages/Clientes'));
 const Servicos = React.lazy(() => import('./pages/Servicos'));
 const Profissionais = React.lazy(() => import('./pages/Profissionais'));
 const WhatsApp = React.lazy(() => import('./pages/WhatsApp'));
+const LandingPage = React.lazy(() => import('./pages/LandingPage'));
 
 export default function App() {
   const { initialize } = useAuthStore();
@@ -38,6 +39,10 @@ export default function App() {
         }
       >
         <Routes>
+          {/* Website Institucional e Comercial */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/site" element={<LandingPage />} />
+
           {/* Public Auth Routes */}
           <Route element={<AuthLayout />}>
             <Route path="/login" element={<Login />} />
@@ -62,7 +67,7 @@ export default function App() {
           </Route>
 
           {/* Fallback */}
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </React.Suspense>
     </HashRouter>
